@@ -9,5 +9,4 @@ describe('Playing ', () => {
 
     expect(result).toEqual(output)
   })
-
 })

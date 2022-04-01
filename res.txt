@@ -1,3 +1,35 @@
-0 scenarios
-0 steps
-0m00.000s
+Feature: Bowling game score
+
+  Scenario Outline: Score of a simple game
+    Given a game with frames '9- 9- 9- 9- 9- 9- 9- 9- 9- 9-'
+    When the score is calculated
+    Then the score is 90
+
+  Scenario Outline: Score of a simple game
+    Given a game with frames '2- 2- 2- 2- 2- 2- 8/ 2- 2- 2-'
+    When the score is calculated
+    Then the score is 30
+
+  Scenario Outline: Score of a simple game
+    Given a game with frames '9- 9- 9- 9- 9- 9- X 9- 9- 9-'
+    When the score is calculated
+    Then the score is 100
+
+  Scenario Outline: Score of a simple game
+    Given a game with frames '9- -- 9- 9- 9- 9- X 9- 9- --'
+    When the score is calculated
+    Then the score is 82
+
+  Scenario Outline: Score of a simple game
+    Given a game with frames '9- 9- 9- 9- 9- 9- X 9- 9- 9/ 5'
+    When the score is calculated
+    Then the score is 106
+
+  Scenario Outline: Score of a simple game
+    Given a game with frames '9- 9- 9- 9- 9- 9- X 9- 9- X 54'
+    When the score is calculated
+    Then the score is 110
+
+6 scenarios (6 passed)
+18 steps (18 passed)
+0m00.007s
